@@ -7,11 +7,11 @@ import {
 import cn from 'classnames';
 import './TodoListItem.scss';
 
-const TodoListItem = ({todo}) => {
+function TodoListItem({todo}) {
     const {text, checked} = todo;
     return(
         <div className="TodoListItem">
-            <div className="{cn('checkbox', {checked})}">
+            <div className={cn('checkbox', { checked })}>
                 {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
                 <div className="text">{text}</div>
             </div>
